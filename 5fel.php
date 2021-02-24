@@ -2,10 +2,10 @@
 <?php
 require_once 'config.php';
 
-$adat=$db->query("SELECT fnev from futo where szulev>2003");
+$stmt=$db->query("SELECT fnev from futo where szulev>2003");
 $lista="";
-while($sor=$adat->fetch()){
-$lista.="<li>{$sor['fnev']}</li>";}
+while($row=$stmt->fetch()){
+$lista.="<li>{$row['fnev']}</li>";}
 ?>
 
 
